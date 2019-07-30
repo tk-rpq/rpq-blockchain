@@ -1,0 +1,14 @@
+fabric:
+  waitTime: 6000
+  connectionProfilePath: "connection-profile.json"
+  channelName: "channel1"
+  userName: "org1admin"
+  secret: "org1adminpw"
+  chaincodeName: "chaincode"
+  chaincodeVersion: "1.0"
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html

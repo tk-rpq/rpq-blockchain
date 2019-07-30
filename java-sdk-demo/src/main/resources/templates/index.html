@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Blockchain Web</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1>区块链应用</h1>
+        <p>这是简介...</p>
+        <p>
+            <a class="btn btn-lg btn-primary" href="" role="button">更多信息</a>
+        </p>
+    </div>
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">用户信息管理</div>
+        <div class="panel-body">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                添加用户
+            </button>
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default" onclick="loadAllUserInfo()">全部</button>
+                <button type="button" class="btn btn-default" onclick="loadUserInfoByStatus(0)">状态-0</button>
+                <button type="button" class="btn btn-default" onclick="loadUserInfoByStatus(1)">状态-1</button>
+            </div>
+        </div>
+        <!-- Table -->
+        <table id="userInfoTable" class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><a class="btn btn-sm btn-primary" href="" role="button">修改状态</a></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td><a class="btn btn-sm btn-primary" href="" role="button">修改状态</a></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td><a class="btn btn-sm btn-primary" href="" role="button">修改状态</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">请填写用户信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="userName">用户姓名</label>
+                        <input type="text" name="userName" class="form-control" id="userName"
+                               placeholder="用户姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="userId">身份证号</label>
+                        <input type="text" name="userId" class="form-control" id="userId"
+                               placeholder="身份证号">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">年龄</label>
+                        <input type="text" name="age" class="form-control" id="age"
+                               placeholder="年龄">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cancelBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="registerBtn" type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/logic.js"></script>
+</body>
+</html>
